@@ -210,21 +210,6 @@ def generate_pw_useragent() -> str:
     return user_agent
 
 
-# def load_user_agents(csv_file="scraper/user_agents.csv"):
-#     with open(csv_file, newline='', encoding="utf-8") as f:
-#         reader = csv.reader(f)
-#         return [row[0] for row in reader if row]
-#
-#
-# user_agents = load_user_agents()
-#
-#
-# def generate_pw_useragent():
-#     user_agents_pool = cycle(user_agents)
-#     ua = next(user_agents_pool)
-#     return ua
-
-
 def retry_with_backoff(func, retries: int = 6, base_delay: float = 1):
     for attempt in range(1, retries + 1):
         try:

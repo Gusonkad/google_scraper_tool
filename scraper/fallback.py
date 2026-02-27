@@ -48,12 +48,6 @@ async def playwright_fallback(init_url: str, user_agent: str, layout_mode: str, 
         await context.add_init_script(_get_eval_js_media())
         page = await context.new_page()
         # await stealth_async(page)
-        # if pw_cookies:
-        #     try:
-        #         await context.add_cookies(pw_cookies)
-        #         logger.info(repr(f"Injected {len(pw_cookies)} cookies"))
-        #     except Exception as exc:
-        #         logger.warning(repr(f"Cookie injection error: {exc}"))
 
         await page.wait_for_timeout(random.randint(500, 1000))
         await page.goto("https://www.google.com/?hl=en", wait_until="domcontentloaded", timeout=30000)
