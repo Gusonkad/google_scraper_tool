@@ -1,0 +1,8 @@
+curl_cffi>=0.6.0
+requests>=2.31.0
+requests[socks]
+playwright==1.58.0
+playwright-stealth==2.0.2
+lxml>=5.2.1
+pytest>=8.0.0
+parsel==1.8.1
